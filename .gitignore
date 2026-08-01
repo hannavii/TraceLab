@@ -1,0 +1,39 @@
+# Unreal Engine generated files
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Visual Studio
+.vs/
+*.sln
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userprefs
+
+# Rider
+.idea/
+*.sln.DotSettings.user
+
+# Build files
+*.opensdf
+*.sdf
+*.tmp
+*.log
+*.obj
+*.pdb
+*.dll
+*.exe
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Unreal autosaves and backups
+Saved/Autosaves/
+Saved/Backup/
+
+# Optional local build folders
+Build/Receipts/Config/DefaultEditorPerProjectUserSettings.ini
