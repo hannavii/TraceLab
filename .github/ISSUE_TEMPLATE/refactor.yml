@@ -1,0 +1,55 @@
+name: Refactor Template
+description: 기존 기능을 유지하면서 코드 구조를 개선하는 작업용 템플릿
+title: "[Refactor] "
+labels:
+  - refactor
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: "📦 어떤 부분을 리팩토링하나요?"
+      description: "리팩토링 대상을 간단히 적어주세요."
+      placeholder: "ex. StalkerAIController 상태 처리 로직 리팩토링"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: "🔴 리팩토링 이유"
+      description: "왜 리팩토링이 필요한지 작성해주세요."
+      placeholder: |
+        ex.
+        - 하나의 클래스에 AI 상태 처리 코드가 집중되어 있음
+        - 중복 코드가 많아 유지보수가 어려움
+        - 디버그용 코드와 실제 동작 코드가 섞여 있음
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "🔧 작업 내용"
+      description: "구체적인 변경 내용을 작성해주세요."
+      placeholder: |
+        ex.
+        - 상태별 처리 함수 분리
+        - 공통 로직 함수화
+        - 변수 및 함수 이름 정리
+        - 불필요한 디버그 코드 제거
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: "✅ 완료 조건"
+      description: "어떤 상태가 되면 완료인지 작성해주세요."
+      placeholder: |
+        - [ ] 기존 기능과 동일하게 동작한다
+        - [ ] 중복 코드가 정리된다
+        - [ ] 코드 가독성이 개선된다
+        - [ ] 주요 기능 테스트가 정상적으로 통과한다
+    validations:
+      required: true
