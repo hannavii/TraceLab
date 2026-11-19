@@ -1,0 +1,49 @@
+name: Infra Template
+description: 빌드, 자동화, CI/CD 등 개발 인프라 작업용 템플릿
+title: "[Infra] "
+labels:
+  - infra
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: "📦 어떤 인프라 작업인가요?"
+      description: "작업 내용을 간단히 적어주세요."
+      placeholder: "ex. Unreal Engine 프로젝트 자동 빌드 환경 구성"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "📌 작업 상세 내용"
+      description: "구체적인 인프라 작업 또는 환경 변경 내용을 작성해주세요."
+      placeholder: |
+        ex.
+        - GitHub Actions 빌드 워크플로 구성
+        - Unreal 프로젝트 패키징 자동화
+        - 빌드 결과물 관리 방식 설정
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "🐻 참고 사항"
+      description: "관련 환경 설정이나 참고 자료를 작성해주세요."
+      placeholder: "ex. Unreal Engine 버전과 빌드 환경 확인 필요"
+    validations:
+      required: false
+
+  - type: textarea
+    id: done
+    attributes:
+      label: "✅ 완료 조건"
+      description: "인프라 구축 완료 기준을 작성해주세요."
+      placeholder: |
+        - [ ] 설정한 환경에서 프로젝트가 정상적으로 빌드된다
+        - [ ] 필요한 자동화 작업이 정상적으로 실행된다
+        - [ ] 기존 개발 환경에 영향을 주지 않는다
+    validations:
+      required: true
