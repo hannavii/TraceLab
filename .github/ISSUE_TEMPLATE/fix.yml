@@ -1,0 +1,62 @@
+name: Fix Template
+description: 버그 또는 잘못된 동작 수정 시 사용하는 이슈 템플릿
+title: "[Fix] "
+labels:
+  - fix
+
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: "📦 무엇을 수정하나요?"
+      description: "수정 대상 또는 문제를 간단히 적어주세요."
+      placeholder: "ex. AI Attack과 Chase 상태 반복 전환 문제 수정"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "🔴 문제 상황"
+      description: "현재 어떤 문제가 발생하는지 작성해주세요."
+      placeholder: |
+        ex.
+        - 공격 거리 경계에서 Attack과 Chase가 반복됨
+        - 플레이어가 움직이지 않아도 상태가 빠르게 전환됨
+        - 로그가 반복적으로 출력됨
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "🔧 수정 내용"
+      description: "어떻게 수정할 예정인지 작성해주세요."
+      placeholder: |
+        ex.
+        - Attack 진입 거리와 이탈 거리 분리
+        - 상태 전환 조건 재정리
+        - 중복 상태 변경 방지 로직 추가
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "🐻 추가 설명"
+      description: "관련 로그, 스크린샷, 재현 조건 등을 작성해주세요."
+      placeholder: "ex. 플레이어와 AI 거리가 약 150cm 근처일 때 주로 재현됨"
+    validations:
+      required: false
+
+  - type: textarea
+    id: done
+    attributes:
+      label: "✅ 완료 조건"
+      description: "어떤 상태가 되면 수정 완료인지 작성해주세요."
+      placeholder: |
+        - [ ] 동일한 상황에서 문제가 재현되지 않는다
+        - [ ] 기존 추격 기능이 정상적으로 동작한다
+        - [ ] 관련 상태 전환이 안정적으로 동작한다
+    validations:
+      required: true
